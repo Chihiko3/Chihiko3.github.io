@@ -1,12 +1,44 @@
+/* Layout for desktop version */
+
 body {
     font-family: Verdana, Geneva, sans-serif;
     background-color: #fff;
     color: #222;
 }
 
+#content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#footnav {
+  font-size: 12px;
+  color: #4B4B4B;
+  clear: both;
+}
+
+#footnav a {
+  border: none;
+  font-size: 12px;
+  color: #4B4B4B;
+}
+
+hr {
+  border: 0;
+  height: 10px;
+  color: white;
+  background-color: white;
+  border-top: 1px solid black;
+}
+
 h1 {
   font-weight: bolder;
   margin-bottom: 0; /*h1 is always followed by a <p>*/
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 h2 {
@@ -17,15 +49,150 @@ h2 {
   border-left: 1px black solid;
 }
 
-h3 {
-  font-weight: bold;
-  font-size: 16px;
+.close {
+  margin-bottom: 4px;
+}
+.space {
+  margin-bottom: 16;
+}
+.zero {
+  margin-bottom: 0;
+}
+
+sup {
+  vertical-align: super;
+  font-size: xx-small;
+  margin-left: 2px;
+}
+
+h2 a, h3 a {
+  border: none;
+  padding-right: 16px;
+  background: transparent url(link.png) no-repeat bottom right;
 }
 
 
-.sample {
+ul {
+  list-style-type: square;
+  padding-left: 1.5em;
+  text-indent:: 1.5em;
+}
+
+p {
+  line-height: 22px;
+}
+
+li p {
+  margin-bottom: 12px;
+}
+
+
+b {
+  font-family: "SimHei", "STHeiti";
+}
+
+img {
+  margin-bottom: 4px;
+}
+
+table {
+  display: block;
+  position: relative;
+  border-collapse: collapse;
+  margin-bottom: 22px;
+}
+
+td, th {
   border: 1px solid black;
-  padding-left: 1em;
-  padding-top: 1em;
+  padding: 2px 20px 2px 4px;  
+}
+
+
+
+/* archive css */
+#cc {
+  color: #4B4B4B;
+  font-size: 12px;
+}
+
+#cclogo {
+  display: inline;
+  float: left;
+  border: 0;
+  margin-right: 10px;
+}
+
+#cc p {
+  line-height: 20px;
+}
+
+#arcbody {
+  background-color: #F2F2F2; /*readability color*/
+}
+
+#arcbody p {
+  line-height: 1.8em;
+}
+
+pre {
+  line-height: 18px;
   margin-left: 1em;
+  margin-bottom: 22px;
+  padding-left: 1.2em;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 90%;
+  background-color: #DDDDDD;
+  overflow-x: auto;
+} 
+
+code, pre span {
+  font-family: "Consolas", monospace;
+  font-size: 14px;
+  color: #4B4B4B;
+  background-color: #DDDDDD;
+}
+
+/* dirty fixes */
+p code, li code {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+pre code {
+  padding: 0;
+}
+
+.header {
+  margin-bottom: 0;
+}
+
+#indexwrap {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Layout for mobile version */
+
+@media handheld, only screen and (max-width: 767px) {
+
+#leftcol, #rightcol, .pad {
+  display: none;
+}
+
+
+}
+
+
+/* Provide higher res assets for iPhone 4 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/* An example of how to override an image with one twice the size for iPhone 4. Specify the original pixel size with background-size.
+.download {
+background: url(../img/downarrow@2x.png) no-repeat;
+background-size: 27px 28px;
+}
+*/
+
 }
