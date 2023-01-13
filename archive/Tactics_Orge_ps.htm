@@ -203,19 +203,16 @@
                 <li class="close">能力下降：将能力提升的“提高”换成降低即可。</li>
             </ul>
             <h1>V. 详细公式</h1>
+            <p>详细公式这一部分的目的是帮读者理清上文提到的各种增益、各种数据在实际上是如何运行的。当然看了可能会更晕 D:</p>
             <h2>A. 基础定义</h2>
             <ul>
-                <li class="close">Ppa：包括所有进攻道具的物理攻击强度，面板强度</li>
-                <li class="close">Ppd：由防御道具影响的物理防御，不包括 RES，面板防御</li>
-                <li class="close">Mpa：包括所有进攻道具的魔法攻击强度，面板强度</li>
-                <li class="close">Mpd：由防御道具影响的物理防御，不包括 RES，面板防御</li>
-                <li class="close">Spa：包括所有进攻道具的必杀技强度，面板强度</li>
+                <li class="close">Ppa：包括所有进攻道具的物理攻击强度，游戏画面上分面板强度</li>
+                <li class="close">Ppd：由防御道具影响的物理防御，不包括 RES，游戏画面上分面板强度</li>
+                <li class="close">Mpa：包括所有进攻道具的魔法攻击强度，游戏画面上分面板强度</li>
+                <li class="close">Mpd：由防御道具影响的物理防御，不包括 RES，游戏画面上分面板强度</li>
+                <li class="close">Spa：包括所有进攻道具的必杀技强度，游戏画面上分面板强度</li>
                 <li class="close">W.x：来自进攻道具的属性加成，比如 W.STR，就是来自进攻道具的 STR 加成</li>
                 <li class="close">A.x：来自防御道具的属性加成</li>
-                <li class="close">Ma：一切攻击修正，0 ~ 200</li>
-                <p style = "text-align: left"><code>Ma = 60 + To + E + C + Wb + Wt + Wm + Prf + F + Ada + S + H + FP</code></p>
-                <li class="close">Md：一切防御修正，0 ~ 200</li>
-                <p style = "text-align: left"><code>Md = 40 + Td + Wb + Wt + F + ADd + S + Sp1 + Sp2 + Sp3</code></p>
                 <li class="close">RES：需要注意火焰长剑造成的直接伤害是火焰伤害而不是物理伤害，增加 RES 的道具在数值上是减去 RES 的值</li>
                 <p style = "text-align: left"><code>RES = 职业RES - A.RES - E - A</code></p>
                 <li class="close">To：来自地形，被元素倾向影响的攻击修正值</li>
@@ -272,6 +269,10 @@
                 <p style = "text-align: left"><code>Mw=0.5,未装备武器的直接攻击，攻击、治疗法术</code></p>
                 <p style = "text-align: left"><code>Mw=0.25,未装备武器的间接攻击，召唤法术</code></p>
                 <p style = "text-align: left"><code>Mw=0.7,非反击情况下下的Attack+单位</code></p>
+                <li class="close">Ma：一切攻击修正，0 ~ 200</li>
+                <p style = "text-align: left"><code>Ma = 60 + To + E + C + Wb + Wt + Wm + Prf + F + Ada + S + H + FP</code></p>
+                <li class="close">Md：一切防御修正，0 ~ 200</li>
+                <p style = "text-align: left"><code>Md = 40 + Td + Wb + Wt + F + ADd + S + Sp1 + Sp2 + Sp3</code></p>
                 <li class="close">Db：游戏中选择敌方后显示的预估伤害，即还没有考虑 R 影响的伤害</li>
                 <li class="close">D：游戏中真正命中时的伤害</li>
             </ul>
