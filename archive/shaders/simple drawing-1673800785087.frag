@@ -21,15 +21,18 @@ void main() {
 	// to map the X and Y values to the RED and GREEN channel.
 	vec2 st = gl_FragCoord.xy/u_resolution;
     vec2 ms = u_mouse/u_resolution;
-	gl_FragColor = vec4(st.x,st.y,0.0,1.0);
+	gl_FragColor = vec4(ms.y+0.5,-ms.x+0.5,0.0,1.0);
+    // left eye
     if(st.x < (0.5 + ms.x/20.0) && st.x > (0.3 + ms.x/20.0) && st.y < (0.8 + ms.y/50.0) && st.y > (0.4 + ms.y/50.0))
     {
         gl_FragColor = vec4(0.0,0.0,0.0,1.0);
     }
+    // right eye 
     if(st.x < (0.9 + ms.x/100.0) && st.x > (0.7 + ms.x/35.0) && st.y < (0.8 + ms.y/75.0) && st.y > (0.4 + ms.y/50.0))
     {
         gl_FragColor = vec4(0.0,0.0,0.0,1.0);
     }
+    // mouse
     if(st.x < (0.7 + ms.x/10.0) && st.x > (0.5 + ms.x/10.0) && st.y < (0.2 + ms.y/5.0) && st.y > (0.1 + ms.y/5.0))
     {
         gl_FragColor = vec4(0.0,0.0,0.0,1.0);
