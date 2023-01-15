@@ -26,7 +26,7 @@ void main() {
     {
         gl_FragColor = vec4(0.0,0.0,0.0,1.0);
     }
-    if(st.x < (0.9 + ms.x/35.0) && st.x > (0.7 + ms.x/35.0) && st.y < (0.8 + ms.y/50.0) && st.y > (0.4 + ms.y/50.0))
+    if(st.x < (0.9 + ms.x/100.0) && st.x > (0.7 + ms.x/35.0) && st.y < (0.8 + ms.y/75.0) && st.y > (0.4 + ms.y/50.0))
     {
         gl_FragColor = vec4(0.0,0.0,0.0,1.0);
     }
