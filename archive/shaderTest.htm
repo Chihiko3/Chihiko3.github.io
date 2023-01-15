@@ -25,24 +25,10 @@
                 <li>u_mouse</li>
                 <li>u_tex[n]</li>
             </ul>
-            <h2>Follow Mouse Color w/o</h2>
-            <canvas class="glslCanvas" data-fragment-url="shaders/colorwithmouse.frag" width="300" height="300"></canvas>
-            <canvas class="glslCanvas" data-fragment="
-            
-            #ifdef GL_ES
-            precision mediump float;
-            #endif
-
-            uniform vec2 u_resolution;
-            uniform vec2 u_mouse;
-            uniform float u_time;
-
-            void main() {
-	        // 把鼠标在画布上的坐标映射到画布大小上，就能在画布中准确使用鼠标的位置信息了
-	        vec2 st = u_mouse/u_resolution;
-	        gl_FragColor = vec4(st.x,0.0,st.y,1.0);
-            }" width="300" height="300">
-            </canvas>
+            <h2>1st shader ever</h2>
+            <canvas class="glslCanvas" data-fragment-url="shaders/1st shader ever-1673798102278.frag" width="300" height="300"></canvas>
+            <h2>simple drawing, fake live2D by shader</h2>
+            <canvas class="glslCanvas" data-fragment-url="shaders/simple drawing-1673799190175.frag" width="300" height="300"></canvas>
             
             <!-- pulic domain notation -->
             <div id="cc">
