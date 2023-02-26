@@ -40,6 +40,7 @@ width: 30.8%;
 
 .fivecol {
 width: 39.45%;
+    
 }
 
 .sixcol {
@@ -133,7 +134,7 @@ h1 {
 font-size: 30px;
 line-height: 36px;		/* Changing this will break the baseline grid. */
 margin-bottom: 16px;	/* Changing this will break the baseline grid. */
-font-family: Georgia;
+    font-family: Georgia, serif;
 font-weight: lighter;
 }
 

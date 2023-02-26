@@ -14,14 +14,12 @@ body {
 
 #footnav {
   font-size: 12px;
-  color: #4B4B4B;
   clear: both;
 }
 
 #footnav a {
   border: none;
   font-size: 12px;
-  color: #4B4B4B;
 }
 
 hr {
@@ -37,24 +35,25 @@ h1 {
   margin-bottom: 0; /*h1 is always followed by a <p>*/
 }
 
-h3 {
-  font-weight: bold;
-  font-size: 16px;
-}
-
 h2 {
   font-weight: bold;
   position: relative;
   left: -9px;
   padding-left: 8px;
-  border-left: 1px black solid;
+  border-left: 2px black solid;
+  
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .close {
   margin-bottom: 4px;
 }
 .space {
-  margin-bottom: 16;
+  margin-bottom: 16px;
 }
 .zero {
   margin-bottom: 0;
@@ -69,14 +68,12 @@ sup {
 h2 a, h3 a {
   border: none;
   padding-right: 16px;
-  background: transparent url(link.png) no-repeat bottom right;
 }
-
 
 ul {
   list-style-type: square;
-  padding-left: 1.5em;
-  text-indent:: 1.5em;
+  padding-left: 2em;
+  text-indent: 0.1em;
 }
 
 p {
@@ -89,7 +86,7 @@ li p {
 
 
 b {
-  font-family: "SimHei", "STHeiti";
+  font-family: "SimHei", "STHeiti", monospace;
 }
 
 img {
@@ -128,7 +125,7 @@ td, th {
 }
 
 #arcbody {
-  background-color: #F2F2F2; /*readability color*/
+  background-color: #55AAAA; /*readability color*/
 }
 
 #arcbody p {
