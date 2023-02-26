@@ -30,7 +30,7 @@
             <h1>I. 回合循环</h1>
             <p></p>
             <h2>A. WT 系统</h2>
-            <p>每一场战斗开始，每个单位的 WT 开始从 MAX WT 逐渐减少（-1）， MAX WT 计算如下：</p>
+            <p class="zero">每一场战斗开始，每个单位的 WT 开始从 MAX WT 逐渐减少（-1）， MAX WT 计算如下：</p>
             <p style = "text-align: left"><code>MAX WT = 510 - AGI + 装备固有WT + 职业固有WT</code></p>
             <p>当某单位的 WT = 0 时，该单位开始行动。因为所有单位的 WT 减少速率是相同的，所以 MAX WT 最少的单位一定是第一回合最先行动的。该单位在回合中可以移动和行动，可以两项都做、只做一项、或者两项都不做。如果两项都做，那么该单位的 WT 会重置为 MAX WT；如果只做一项，该单位的 WT = MAX WT 的 3/4；如果两项都不做，该单位的 WT = MAX WT 的 1/2。这种判断是否移动或行动的结算顺位很低，如果有其他影响 WT 的因素，那么这个结算会基于最新的 WT 结果计算，下方的例子会有体现。除了该影响 WT 的机制之外，还有一些法术和敌方专属的行动会影响 WT（这里不写具体技能名字，只记录如何影响 WT）：</p>
             <ul>
@@ -44,7 +44,7 @@
             </ul>
             <p>皇家骑士团里的 WT 系统（甚至是各种系统）都被三角战略继承了。</p>
             <h2>B. HP/MP 自恢复</h2>
-            <p>每场战斗开始时，所有单位 MP = 0，MP 在没有任何装备的情况下也会自恢复，计算如下：</p>
+            <p class="zero">每场战斗开始时，所有单位 MP = 0，MP 在没有任何装备的情况下也会自恢复，计算如下：</p>
             <p style = "text-align: left"><code>每经过 20 WT => +1 MP</code></p>
             <p>如果到某单位回合时消耗的 WT 不够 20，那么会累积到下回合的 MP 计算中。比如等待了 6WT，该单位进入回合了，那么回合结束后，该单位只需要再等待 14WT 就可以+1MP。MP 和 WT 的转换速率会被一些装备影响，比如 20 WT => +2 MP。</p>
             <p>HP 在没有特定装备的情况下不会自恢复，需要依靠装备达成自恢复，比如 20 WT => +1 HP，不展开说了。MP 和 HP 的转换速率都是可以叠加的（但是 MP 只有一个部位有该词条，所以 MP 的转换速率实际无法叠加，只有 HP 转化速率可以叠加，因为有多个部位有此词条）。除此之外，就只能依靠道具或魔法恢复固定的 MP 或 HP。</p>
@@ -53,15 +53,15 @@
             <h2>A. 主要属性</h2>
             <p>主要属性不受当前职业和装备影响 。不过一些装备可以影响提升等级时的成长值，每个职业在升级时各个属性都会获得一定提升，这个提升会有随机的增益浮动（+0~+2）。</p>
             <ul>
-                <li class="close">HP：随着等级提升，捡起生命卡牌会增加 1-5</li>
-                <li class="close">MP：随着等级提升，捡起魔法卡牌会增加 1-5。对于不使用魔法的单位完全无用</li>
-                <li class="close">STR：随着等级提升，捡起 STR 卡牌增加 1-3，特殊道具+10。直接、间接攻击=会在之后的衍生属性中详述</li>
-                <li class="close">VIT：随着等级提升（大部分职业成长提升较小），捡起 VIT 卡牌增加 1-3，特殊道具+10。高 VIT 比穿好装备更重要</li>
-                <li class="close">INT：随着等级提升，捡起 INT 卡牌增加 1-3。对不使用魔法的单位完全无用，特殊道具+10</li>
-                <li class="close">MEN：随着等级提升，捡起 MEN 卡牌增加 1-3，特殊道具+10</li>
-                <li class="close">AGI：只能随着等级提升，没有卡牌，没有特殊道具。</li>
-                <li class="close">DEX：随着等级提升，捡起 DEX 卡牌增加 1-3</li>
-                <li class="close">LUK：所有可控单位的初始 LUK 都是 50，只能通过拾取 LUK 卡牌增加 1-2 或在穿戴特殊装备时升级获得，是唯一一个不会随着等级提升增加的属性。攻击方 LUK 如果超过受击方，每一点 LUK 会使直接伤害多造成 1 点伤害。受击方 LUK 如果超过所有攻击方，每一点 LUK 会减少 1 点受到的伤害。击杀敌方后，掉落物品而不是卡牌的概率为 LUK%，所以掉卡牌的概率就是 (100 - LUK)%。LUK 对于暴击的影响计算如下：
+                <li class="zero">HP：随着等级提升，捡起生命卡牌会增加 1-5</li>
+                <li class="zero">MP：随着等级提升，捡起魔法卡牌会增加 1-5。对于不使用魔法的单位完全无用</li>
+                <li class="zero">STR：随着等级提升，捡起 STR 卡牌增加 1-3，特殊道具+10。直接、间接攻击=会在之后的衍生属性中详述</li>
+                <li class="zero">VIT：随着等级提升（大部分职业成长提升较小），捡起 VIT 卡牌增加 1-3，特殊道具+10。高 VIT 比穿好装备更重要</li>
+                <li class="zero">INT：随着等级提升，捡起 INT 卡牌增加 1-3。对不使用魔法的单位完全无用，特殊道具+10</li>
+                <li class="zero">MEN：随着等级提升，捡起 MEN 卡牌增加 1-3，特殊道具+10</li>
+                <li class="zero">AGI：只能随着等级提升，没有卡牌，没有特殊道具。</li>
+                <li class="zero">DEX：随着等级提升，捡起 DEX 卡牌增加 1-3</li>
+                <li class="zero">LUK：所有可控单位的初始 LUK 都是 50，只能通过拾取 LUK 卡牌增加 1-2 或在穿戴特殊装备时升级获得，是唯一一个不会随着等级提升增加的属性。攻击方 LUK 如果超过受击方，每一点 LUK 会使直接伤害多造成 1 点伤害。受击方 LUK 如果超过所有攻击方，每一点 LUK 会减少 1 点受到的伤害。击杀敌方后，掉落物品而不是卡牌的概率为 LUK%，所以掉卡牌的概率就是 (100 - LUK)%。LUK 对于暴击的影响计算如下：
                     <p></p>
                     <p style = "text-align: left"><kbd>暴击几率 = 5% + (攻击方LUK - 受击方LUK)%</kbd></p>
                 </li>
@@ -313,33 +313,33 @@
             <p style = "text-align: left"><code>？</code></p>
             <h2>B. 必杀技</h2>
             <h3>1. 标准必杀技</h3>
-            <p>必杀攻击强度</p>
+            <p class="zero">必杀攻击强度</p>
             <p style = "text-align: left"><code>Spa = [(MEN + W.MEN) x 3/2 + (STR + W.STR)/2] x 2/3</code></p>
-            <p>受击者物理防御强度计算</p>
+            <p class="zero">受击者物理防御强度计算</p>
             <p style = "text-align: left"><code>Ppd = VIT + A.VIT + (STR + A.STR)/2</code></p>
-            <p>预估基础伤害</p>
+            <p class="zero">预估基础伤害</p>
             <p style = "text-align: left"><code>Db = [(Spa x Ma% - Ppd x Md%) * RES% + La - Ld] x Mw</code></p>
-            <p>最终实际伤害 (1~999,且不会超过受击者MAX HP)</p>
+            <p class="zero">最终实际伤害 (1~999,且不会超过受击者MAX HP)</p>
             <p style = "text-align: left"><code>D = Db + R</code></p>
             <p>后面列举一些特殊计算方式的必杀技</p>
             <h3>2. 单依赖必杀技</h3>
-            <p>Fudo</p>
+            <p class="zero">Fudo</p>
             <p style = "text-align: left"><code>D = 攻击者DEX</code></p>
-            <p>Dracul</p>
+            <p class="zero">Dracul</p>
             <p style = "text-align: left"><code>D = 攻击者W.STR x 2</code></p>
-            <p>Agony</p>
+            <p class="zero">Agony</p>
             <p style = "text-align: left"><code>D = 攻击者MaxHP - 攻击者CurrentHP</code></p>
             <h3>3. 比例伤害必杀技</h3>
-            <p>Abyss</p>
+            <p class="zero">Abyss</p>
             <p style = "text-align: left"><code>D = 3/4 x 受击者CurrentHP</code></p>
-            <p>LifeSuck</p>
+            <p class="zero">LifeSuck</p>
             <p style = "text-align: left"><code>D = 受击者VIT / 4</code></p>
-            <p>CalmSong</p>
+            <p class="zero">CalmSong</p>
             <p style = "text-align: left"><code>D = 受击者Current MP x 9/10</code></p>
             <h3>4. 比例治疗必杀技</h3>
-            <p>CuteKiss (Faerie)</p>
+            <p class="zero">CuteKiss (Faerie)</p>
             <p style = "text-align: left"><code>-D = 施法者HP / 10</code></p>
-            <p>DeepKiss (Faerie)</p>
+            <p class="zero">DeepKiss (Faerie)</p>
             <p style = "text-align: left"><code>-D = 施法者HP / 2</code></p>
             <p></p>
             <p> END </p>

@@ -12,6 +12,11 @@ body {
   margin-bottom: 30px;
 }
 
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+}
+
 #footnav {
   font-size: 12px;
   clear: both;
@@ -84,7 +89,6 @@ li p {
   margin-bottom: 12px;
 }
 
-
 b {
   font-family: "SimHei", "STHeiti", monospace;
 }
@@ -125,7 +129,7 @@ td, th {
 }
 
 #arcbody {
-  background-color: #55AAAA; /*readability color*/
+  background-color: #C0C0C0; /*readability color*/
 }
 
 #arcbody p {

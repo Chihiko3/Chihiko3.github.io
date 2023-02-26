@@ -134,7 +134,7 @@ h1 {
 font-size: 30px;
 line-height: 36px;		/* Changing this will break the baseline grid. */
 margin-bottom: 16px;	/* Changing this will break the baseline grid. */
-    font-family: Georgia, serif;
+font-family: Georgia, serif;
 font-weight: lighter;
 }
 
