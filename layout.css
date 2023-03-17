@@ -86,7 +86,7 @@ h2 a, h3 a {
 }
 
 ul {
-  list-style-type: square;
+  list-style-type: circle;
   padding-left: 2em;
   text-indent: 0.1em;
 }
