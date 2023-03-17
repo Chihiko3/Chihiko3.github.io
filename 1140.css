@@ -117,7 +117,9 @@ margin-bottom: 20px;
 }
 
 p, ul, ol, blockquote {
-margin-bottom: 15px;	/* Changing this will break the baseline grid. */
+margin-bottom: 10px;	/* Changing this will break the baseline grid. */
+    font-family: "MS Sans Serif";
+    font-size: 15px;
 }
 
 li {
@@ -131,25 +133,37 @@ padding-left: 15px;
 margin-left: -15px;
 }
 
+h0{
+    font-size: 50px;
+    line-height: 36px; /* Changing this will break the baseline grid. */
+    margin-top: 20px;
+    margin-bottom: 16px;	/* Changing this will break the baseline grid. */
+    font-family: "MS Sans Serif";
+
+}
+
 h1 {
-font-size: 30px;
-line-height: 36px;		/* Changing this will break the baseline grid. */
+    
+font-size: 25px;
+line-height: 36px; /* Changing this will break the baseline grid. */
+    margin-top: 20px;
 margin-bottom: 16px;	/* Changing this will break the baseline grid. */
-font-family: Georgia, serif;
-font-weight: lighter;
+    font-family: "MS Sans Serif";
+
 }
 
 h2 {
 font-size: 20px;
-margin-bottom: 18px;	/* Changing this will break the baseline grid. */
-font-family: Georgia, serif;
-font-weight: lighter;
+    margin-top: 20px;
+margin-bottom: 5px;	/* Changing this will break the baseline grid. */
+    font-family: "MS Sans Serif";
+
 }
 
 h3 {
-font-size: 16px;
+font-size: 15px;
 margin-bottom: 4px;	/* Changing this will break the baseline grid. */
-font-family: Georgia, serif;
-font-weight: lighter;
+    font-family: "MS Sans Serif";
+
 }
 

@@ -45,6 +45,10 @@ hr {
   );
 }
 
+h0{
+  font-weight: bolder;
+  margin-bottom: 0; /*h1 is always followed by a <p>*/
+}
 h1 {
   font-weight: bolder;
   margin-bottom: 0; /*h1 is always followed by a <p>*/
