@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Yuzu | Chihiko's</title>
+    <title> Yuzu | Chihiko's </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../1140.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../mobile.css" media="handheld, only screen and (max-width: 767px)" />
@@ -14,14 +14,67 @@
     <div class="row">
         <div class="twocol" id="leftcol"><br/></div>
         <div class="sevencol last" id="content">
-            <h0>Article Title</h0>
-            <p>second title</p>
-            <!--<p><em>last update 12/24/2022</em></p>-->
-            <h2>小标题</h2>
-            <p>内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充</p>
-            <h2>小标题</h2>
-            <p>第一段内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充</p>
-            <p>第二段内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充内容填充</p>
+            <h0>Yuzu</h0>
+            <p>Nintendo Switch 模拟器安装</p>
+            <!--<p><em>last update 11/19/2023</em></p>-->
+            <h2>模拟器本体</h2>
+            <p>前往<a href="https://yuzu-emu.org/downloads/#windows" target="_blank">官网</a>下载模拟器本体</p>
+            <ul>
+                <li>"Download for Windows x 64"是下载一个安装器之类的软件（大概是为了让付费版自动更新更方便设计的）</li>
+                <li>"Builds"是直接下载一个文件压缩包（推荐，对于免费版来说够了）</li>
+                <li>此时打开模拟器会报错，先忽视</li>
+            
+            </ul>
+            <h2>Firmwares</h2>
+            <p>前往<a href="https://darthsternie.net/switch-firmwares/" target="_blank">官网</a>下载最新Firmwares</p>
+            <ul>
+                <li>MEGA和Archive.org是两种不同的下载方式，都可以</li>
+                <li>不需要下载“Official China Firmwares”中的东西</li>
+            </ul>
+            <h2>Prod.keys</h2>
+            <p>前往<a href="https://theprodkeys.com/latest-yuzu-prod-keys/" target="_blank">官网</a>下载与Firmwares版本对应的Prod.keys</p>
+            <ul>
+                <li>如果网站过期了，直接Google搜索"prod keys"即可</li>
+            </ul>
+            <h2>解决模拟器报错</h2>
+            <ul>
+                <li>放置Prod.keys</li>
+                <ul>
+                    <li>模拟器左上角，“文件” -> “打开yuzu文件夹”</li>
+                    <li>将Prod.keys文件放入keys文件夹</li>
+                </ul>
+                <li>放置Firmwares</li>
+                <ul>
+                    <li>模拟器左上角，“文件” -> “打开yuzu文件夹”</li>
+                    <li>将firmwares的文件全部解压到registered文件夹</li>
+                    <li>...\yuzu\nand\system\Contents\registered</li>
+                </ul>
+            </ul>
+            <h2>安装游戏</h2>
+            <ul>
+                <li>下载好游戏包后，往往会有一个.xci或者.nsp文件，在模拟器中点击“添加游戏目录”，然后将包含该.xci或者.nsp文件的上层文件夹作为游戏目录</li>
+                <li>有时候会出现没有.xci或者.nsp的情况，这种情况下通常会包含一个.nsz的文件，这时候需要使用转换器进行格式转换（即将其转换为.xci或.nsp）</li>
+                <ul>
+                    <li><a href="https://github.com/dezem/SAK" target="_blank">下载SAK转换器</a></li>
+                </ul>
+                <li>关于补丁安装。模拟器左上角，"文件" -> “安装到文件NAND”，随后选择补丁文件即可</li>
+            </ul>
+            <h2>Mods下载</h2>
+            <ul>
+                <li>模拟器自身提供了一个<a href="https://github.com/yuzu-emu/yuzu/wiki/Switch-Mods" target="_blank">Mods库</a></li>
+                <li>Github上有个稳定的<a href="https://github.com/theboy181/switch-ptchtxt-mods" target="_blank">Mods项目</a></li>
+                <li>上面两个链接提供的Mods数量较少，根据游戏，可以自行搜索一些Mods</li>
+            </ul>
+            <h2>Mods安装</h2>
+            <ul>
+                <li>模拟器中，右键游戏条目，选择“打开MOD数据位置”</li>
+                <li>依据如下的文件夹嵌套方式放置Mods文件</li>
+                <ul>
+                    <li> ...\yuzu\load\[一串很长的代码]\[mod的名字]\exefs</li>
+                    <li>（下为例子）</li>
+                    <li>...\yuzu\load\0100F2C0115B6000\improved 60fps\exefs</li>
+                </ul>
+            </ul>
             
             <!-- foot navigation -->
             <div class="row">
