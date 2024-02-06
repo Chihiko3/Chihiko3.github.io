@@ -96,7 +96,7 @@ line-height: 24px;		/* Changing this will break the baseline grid. */
 a {
 text-decoration: none;
 padding-bottom: 1px;
-border-bottom: 1px dashed black;
+border-bottom: 1px dashed black; 
 color: black;
 }
 

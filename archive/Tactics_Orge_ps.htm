@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html lang="">
 <head>
     <meta charset="utf-8"/>
-    <title> Tactics Orge | Chihiko's</title>
+    <title> Tactics Orge | Chihiko's </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../1140.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../mobile.css" media="handheld, only screen and (max-width: 767px)" />
@@ -13,11 +13,11 @@
 <div class="container">
     <div class="row">
         <div class="twocol" id="leftcol"><br/></div>
-        <div class="sevencol" id="content">
+        <div class="sevencol last" id="content">
             <h0>Tactics Orge Battle on PS</h0>
             <p>皇家骑士团2战斗浅析</p>
-            <p><em>last update 01/13/2023</em></p>
-            <p>因为作者很懒所以不写导航栏的代码了，本文大致分为了五个部分：</p>
+            <!-- <p><em>last update 01/13/2023</em></p> -->
+            <p>本文大致分为了五个部分：</p>
             <ul>
                 <li class="close">回合循环</li>
                 <li class="close">养成属性</li>
@@ -27,9 +27,9 @@
             </ul>
             <p>本文最好搭配<a href="https://tacticsogre.fandom.com/wiki/Class">单位表</a>一起查看，辅以游戏会有更好的理解。需要注意的是，由于版本差异或许会有一些数值上的差异，但是考虑到本文档不是一个数值文档，而是一个偏向于战斗系统的文档，也就无所谓了。</p>
 
-            <h1>I. 回合循环</h1>
+            <h2>I. 回合循环</h2>
             <p></p>
-            <h2>A. WT 系统</h2>
+            <h3>A. WT 系统</h3>
             <p class="zero">每一场战斗开始，每个单位的 WT 开始从 MAX WT 逐渐减少（-1）， MAX WT 计算如下：</p>
             <p style = "text-align: left"><code>MAX WT = 510 - AGI + 装备固有WT + 职业固有WT</code></p>
             <p>当某单位的 WT = 0 时，该单位开始行动。因为所有单位的 WT 减少速率是相同的，所以 MAX WT 最少的单位一定是第一回合最先行动的。该单位在回合中可以移动和行动，可以两项都做、只做一项、或者两项都不做。如果两项都做，那么该单位的 WT 会重置为 MAX WT；如果只做一项，该单位的 WT = MAX WT 的 3/4；如果两项都不做，该单位的 WT = MAX WT 的 1/2。这种判断是否移动或行动的结算顺位很低，如果有其他影响 WT 的因素，那么这个结算会基于最新的 WT 结果计算，下方的例子会有体现。除了该影响 WT 的机制之外，还有一些法术和敌方专属的行动会影响 WT（这里不写具体技能名字，只记录如何影响 WT）：</p>
@@ -43,14 +43,14 @@
                 <li class="close">行为-抵达：在战斗中，由剧情引出的增援部队 WT = 0</li>
             </ul>
             <p>皇家骑士团里的 WT 系统（甚至是各种系统）都被三角战略继承了。</p>
-            <h2>B. HP/MP 自恢复</h2>
+            <h3>B. HP/MP 自恢复</h3>
             <p class="zero">每场战斗开始时，所有单位 MP = 0，MP 在没有任何装备的情况下也会自恢复，计算如下：</p>
             <p style = "text-align: left"><code>每经过 20 WT => +1 MP</code></p>
             <p>如果到某单位回合时消耗的 WT 不够 20，那么会累积到下回合的 MP 计算中。比如等待了 6WT，该单位进入回合了，那么回合结束后，该单位只需要再等待 14WT 就可以+1MP。MP 和 WT 的转换速率会被一些装备影响，比如 20 WT => +2 MP。</p>
             <p>HP 在没有特定装备的情况下不会自恢复，需要依靠装备达成自恢复，比如 20 WT => +1 HP，不展开说了。MP 和 HP 的转换速率都是可以叠加的（但是 MP 只有一个部位有该词条，所以 MP 的转换速率实际无法叠加，只有 HP 转化速率可以叠加，因为有多个部位有此词条）。除此之外，就只能依靠道具或魔法恢复固定的 MP 或 HP。</p>
-            <h1>II. 养成属性</h1>
+            <h2>II. 养成属性</h2>
             <p>需要玩家自己养成的属性，包括纯数值的主要属性和衍生属性（由主要属性和装备一起得出）</p>
-            <h2>A. 主要属性</h2>
+            <h3>A. 主要属性</h3>
             <p>主要属性不受当前职业和装备影响 。不过一些装备可以影响提升等级时的成长值，每个职业在升级时各个属性都会获得一定提升，这个提升会有随机的增益浮动（+0~+2）。</p>
             <ul>
                 <li class="zero">HP：随着等级提升，捡起生命卡牌会增加 1-5</li>
@@ -66,7 +66,7 @@
                     <p style = "text-align: left"><kbd>暴击几率 = 5% + (攻击方LUK - 受击方LUK)%</kbd></p>
                 </li>
             </ul>
-            <h2>B. 衍生属性</h2>
+            <h3>B. 衍生属性</h3>
             <p>衍生属性会受当前职业和装备影响，往往会显示在游戏画面上方面板。这里将其来源分为两类来，进攻道具（武器、戒指、项链）和防御道具（头盔、衣服、盾牌、护手、鞋子、背包道具）。</p>
             <p>这里给出的只是为了便于理解，有任何疑问请以最后的详细公式为准。</p>
             <ul>
@@ -102,9 +102,9 @@
                     <p style = "text-align: left"><code>[3/2 x (MEN + 进攻道具MEN)] + (STR + 进攻道具STR)/2</code></p>
                 </li>
             </ul>
-            <h1>III. 天然属性</h1>
+            <h2>III. 天然属性</h2>
             <p>玩家不需要培养的属性，是依附于游戏世界观的天然属性，绝大部分不可更改。</p>
-            <h2>A. 角色属性</h2>
+            <h3>A. 角色属性</h3>
             <p>体型：</p>
             <ul>
                 <li class="close">S，能使用装备和法术，可以踩着 L 去更高的地形</li>
@@ -141,8 +141,8 @@
             <p>领袖：只有主角和敌方领袖有这个属性。战斗中，如果一方领袖死亡且没有即刻复活，领袖死亡一方直接失败。对于敌方领袖，还会赋予免疫眩晕、睡眠、毒药、石化的特性（对其释放会照常显示成功率，但是永远不会成功）。</p>
             <h2>B. 职业属性</h2>
             <p>每种职业会有自身自带的属性。</p>
-            <p>移动范围：只受职业影响，会赋予单位 4-7 的移动点（movement point）。通常一个格子（官方叫panel）花费 1 个移动点（垂直海拔移动也需要算格子数），但也有特殊平面消耗更多移动点，不同的天气也会带来不同的移动点消耗。三角战略中的位移部分是参考皇家骑士团 2 的。</p>
-            <p>移动类型：决定了单位移动的规则，可以大致分为基础类型和附加类型，标明了"上n下n"的为基础类型，其余为附加类型，附加类型不唯一。：</p>
+            <p><b>移动范围</b>：只受职业影响，会赋予单位 4-7 的移动点（movement point）。通常一个格子（官方叫panel）花费 1 个移动点（垂直海拔移动也需要算格子数），但也有特殊平面消耗更多移动点，不同的天气也会带来不同的移动点消耗。三角战略中的位移部分是参考皇家骑士团 2 的。</p>
+            <p><b>移动类型</b>：决定了单位移动的规则，可以大致分为基础类型和附加类型，标明了"上n下n"的为基础类型，其余为附加类型，附加类型不唯一。：</p>
             <ul>
                 <li class="close">轻步：能够爬上 2 个平面，下落 3 个平面。能够水平跳跃 1 个平面的间隔 （起点和终点在同一高度才行）</li>
                 <li class="close">轻步（强化）：上 3 下 4，水平跳 1（同上），只有 2 个职业是这种移动类型，体现差异化</li>
@@ -154,13 +154,13 @@
                 <li class="close">飞行：能够没有惩罚的飞过任何地形（包括阻挡物），但是在终点落地时会和普通单位一样受到地形影响。在没有漂浮或熔岩类型时，无法降落在水面和熔岩上。在动画表现上，如果依靠“迅速”就可以到达目的地，那么就不会出现飞行动画。无法被摔死之类的地形杀，坠落后会自动飞回来反击敌人</li>
                 <li class="close">折跃：传送，可以穿过障碍物和墙，但是和飞行一样，没有漂浮或熔岩类型时，无法落在水面和熔岩上</li>
             </ul>
-            <p>天气耐性：每个职业都有独立的天气耐性，而且这个东西和游戏内的天气毫无关系，只是一个影响单位攻击和防御的修正值，往往为 0, 2, 4。个人猜测最开始是想做天气相关的东西，但是后来砍掉了。然后这个数值被用来当做一种修正值，只不过没有改名字。</p>
-            <p>WT 惩罚：在 WT 部分提到的职业固有 WT。</p>
-            <p>抗性 RES：对于游戏中 7 个元素，Physical, Wind(Air), Fire, Earth, Water, Virtue(Light), Bane(Dark)，每个职业都会有各自的抗性。以百分比的形式表达该单位会受到到 n%的该元素伤害，百分比越低，抗性越高，受到的伤害越少。每个单位会获得自身元素抗性-10%的增益和相克元素抗性+10%的惩罚。秩序倾向的单位 -5 Light RES, +5 Dark RES，混沌倾向的单位相反。</p>
-            <p>徒手间接攻击类型：当间接攻击的单位不装备间接武器时，会使用徒手间接武器。武器类型会依据单位的职业改变，忍者和黑暗忍者会丢十字标，剑圣和领主会使用 Accuse，其他会丢石头。</p>
-            <p>武器偏好：一些职业（并非所有职业）会拥有偏好的武器，当使用偏好武器时，会获得 +3 的攻击修正值。</p>
-            <p>魔法栏位：由职业决定能够装备多少个魔法，0 - 3 个。有些职业会强制装备一些魔法，占用魔法栏位。</p>
-            <p>魔法系列：有十个系列的魔法，不同的职业能够使用不同系列的魔法，特殊角色虽然可以装备一些系列的魔法，但是会在战斗中拒绝使用。单纯记录名字，不展开说了：</p>
+            <p><b>天气耐性</b>：每个职业都有独立的天气耐性，而且这个东西和游戏内的天气毫无关系，只是一个影响单位攻击和防御的修正值，往往为 0, 2, 4。个人猜测最开始是想做天气相关的东西，但是后来砍掉了。然后这个数值被用来当做一种修正值，只不过没有改名字。</p>
+            <p><b>WT 惩罚</b>：在 WT 部分提到的职业固有 WT。</p>
+            <p><b>抗性 RES</b>：对于游戏中 7 个元素，Physical, Wind(Air), Fire, Earth, Water, Virtue(Light), Bane(Dark)，每个职业都会有各自的抗性。以百分比的形式表达该单位会受到到 n%的该元素伤害，百分比越低，抗性越高，受到的伤害越少。每个单位会获得自身元素抗性-10%的增益和相克元素抗性+10%的惩罚。秩序倾向的单位 -5 Light RES, +5 Dark RES，混沌倾向的单位相反。</p>
+            <p><b>徒手间接攻击类型</b>：当间接攻击的单位不装备间接武器时，会使用徒手间接武器。武器类型会依据单位的职业改变，忍者和黑暗忍者会丢十字标，剑圣和领主会使用 Accuse，其他会丢石头。</p>
+            <p><b>武器偏好</b>：一些职业（并非所有职业）会拥有偏好的武器，当使用偏好武器时，会获得 +3 的攻击修正值。</p>
+            <p><b>魔法栏位</b>：由职业决定能够装备多少个魔法，0 - 3 个。有些职业会强制装备一些魔法，占用魔法栏位。</p>
+            <p><b>魔法系列</b>：有十个系列的魔法，不同的职业能够使用不同系列的魔法，特殊角色虽然可以装备一些系列的魔法，但是会在战斗中拒绝使用。单纯记录名字，不展开说了：</p>
             <ul>
                 <li class="close">Valkyrie Set</li>
                 <li class="close">Wizard Set</li>
@@ -172,7 +172,7 @@
                 <li class="close">Cleric Set</li>
                 <li class="close">Priest Set</li>
             </ul>
-            <p>特殊属性：一些职业会有特殊的特质，放在这儿一并说了：</p>
+            <p><b>特殊属性</b>：一些职业会有特殊的特质，放在这儿一并说了：</p>
             <ul>
                 <li class="close">Attack+：替换 Attack 指令。该单位在回合内，若装备了两个直接武器，可对受击者进行两次连续直接攻击。但是也有很多限制：
                     <ol></ol>
@@ -188,7 +188,7 @@
                 <li class="close">Gunnery：只有枪士（Gunner）拥有，枪士可以将枪用作直接武器而非间接武器</li>
                 <li class="close">不死：该单位无法被光明元素的治疗技能治疗。当该单位死亡，其 WT 依旧会运作，当 WT=0 时，满血复活。只能被特定法术、必杀技永久消灭，或者被地形杀</li>
             </ul>
-            <h1>IV. 异常状态</h1>
+            <h2>IV. 异常状态</h2>
             <ul>
                 <li class="close">加速：在 WT 系统中提到了</li>
                 <li class="close">减速：同上</li>
@@ -202,15 +202,15 @@
                 <li class="close">能力提升：提高目标主要武器属性，持续 500WT。若再次释放，如果会优先给目标次要武器提高属性，如果没有次要武器，就会刷新主要武器上的持续时间。无法被消除</li>
                 <li class="close">能力下降：将能力提升的“提高”换成降低即可。</li>
             </ul>
-            <h1>V. 详细公式</h1>
+            <h2>V. 详细公式</h2>
             <p>详细公式这一部分的目的是帮读者理清上文提到的各种增益、各种数据在实际上是如何运行的。当然看了可能会更晕 D:</p>
-            <h2>A. 基础定义</h2>
+            <h3>A. 基础定义</h3>
             <ul>
-                <li class="close">Ppa：包括所有进攻道具的物理攻击强度，游戏画面上分面板强度</li>
-                <li class="close">Ppd：由防御道具影响的物理防御，不包括 RES，游戏画面上分面板强度</li>
-                <li class="close">Mpa：包括所有进攻道具的魔法攻击强度，游戏画面上分面板强度</li>
-                <li class="close">Mpd：由防御道具影响的物理防御，不包括 RES，游戏画面上分面板强度</li>
-                <li class="close">Spa：包括所有进攻道具的必杀技强度，游戏画面上分面板强度</li>
+                <li class="close">Ppa：包括所有进攻道具的物理攻击强度，游戏画面上方面板强度</li>
+                <li class="close">Ppd：由防御道具影响的物理防御，不包括 RES，游戏画面上方面板强度</li>
+                <li class="close">Mpa：包括所有进攻道具的魔法攻击强度，游戏画面上方面板强度</li>
+                <li class="close">Mpd：由防御道具影响的物理防御，不包括 RES，游戏画面上方面板强度</li>
+                <li class="close">Spa：包括所有进攻道具的必杀技强度，游戏画面上方面板强度</li>
                 <li class="close">W.x：来自进攻道具的属性加成，比如 W.STR，就是来自进攻道具的 STR 加成</li>
                 <li class="close">A.x：来自防御道具的属性加成</li>
                 <li class="close">RES：需要注意火焰长剑造成的直接伤害是火焰伤害而不是物理伤害，增加 RES 的道具在数值上是减去 RES 的值</li>
@@ -276,8 +276,8 @@
                 <li class="close">Db：游戏中选择敌方后显示的预估伤害，即还没有考虑 R 影响的伤害</li>
                 <li class="close">D：游戏中真正命中时的伤害</li>
             </ul>
-            <h2>B. 物理攻击</h2>
-            <h3>1. 伤害</h3>
+            <h3>B. 物理攻击</h3>
+            <h4>1. 伤害</h4>
             <p>物理攻击强度</p>
             <p style = "text-align: left"><code>Ppa = STR + W.STR + (DEX + W.DEX)/2</code></p>
             <p>受击者物理防御强度计算</p>
@@ -291,8 +291,8 @@
             <h3>2. 命中率</h3>
             <p style = "text-align: left"><code>Hit% =
                 {[[攻击者AGI + 攻击者A.AGI + (攻击者DEX + 攻击者A.DEX)/4 - 总重量] x Ma%] - [[受击者AGI + 受击者A.AGI + (受击者DEX + 受击者A.DEX)/4 - 总重量] x Md%]} + La - Ld + 50 + Si + R </code></p>
-            <h2>B. 魔法释放</h2>
-            <h3>1. 攻击魔法伤害</h3>
+            <h3>B. 魔法释放</h3>
+            <h4>1. 攻击魔法伤害</h4>
             <p>魔法攻击强度</p>
             <p style = "text-align: left"><code>Mpa = INT + W.INT + (MEN + W.MEN)/2</code></p>
             <p>受击者物魔法防御强度计算</p>
@@ -302,17 +302,17 @@
             <p>最终实际伤害 (1~999,且不会超过受击者MAX HP)</p>
             <p style = "text-align: left"><code>D = Db + R</code></p>
             <p>召唤魔法比较特殊，按着这个伤害算出来的是每一次攻击的伤害，而不是总伤害（召唤魔法一般是召唤出来某个属性的精灵对敌人发动数次攻击）</p>
-            <h3>2. 恢复魔法治疗</h3>
+            <h4>2. 恢复魔法治疗</h4>
             <p>魔法治疗强度</p>
             <p style = "text-align: left"><code>Mpa = INT + W.INT + (MEN + W.MEN)/2</code></p>
             <p>预估基础治疗</p>
             <p style = "text-align: left"><code>-Db = Mpa x 5/9 x Ma% x Mw</code></p>
             <p>最终实际治疗(1~999,且不会超过已损失生命值)</p>
             <p style = "text-align: left"><code>-D = Db + R</code></p>
-            <h3>3. 魔法命中率</h3>
+            <h4>3. 魔法命中率</h4>
             <p style = "text-align: left"><code>？</code></p>
-            <h2>B. 必杀技</h2>
-            <h3>1. 标准必杀技</h3>
+            <h3>B. 必杀技</h3>
+            <h4>1. 标准必杀技</h4>
             <p class="zero">必杀攻击强度</p>
             <p style = "text-align: left"><code>Spa = [(MEN + W.MEN) x 3/2 + (STR + W.STR)/2] x 2/3</code></p>
             <p class="zero">受击者物理防御强度计算</p>
@@ -322,21 +322,21 @@
             <p class="zero">最终实际伤害 (1~999,且不会超过受击者MAX HP)</p>
             <p style = "text-align: left"><code>D = Db + R</code></p>
             <p>后面列举一些特殊计算方式的必杀技</p>
-            <h3>2. 单依赖必杀技</h3>
+            <h4>2. 单依赖必杀技</h4>
             <p class="zero">Fudo</p>
             <p style = "text-align: left"><code>D = 攻击者DEX</code></p>
             <p class="zero">Dracul</p>
             <p style = "text-align: left"><code>D = 攻击者W.STR x 2</code></p>
             <p class="zero">Agony</p>
             <p style = "text-align: left"><code>D = 攻击者MaxHP - 攻击者CurrentHP</code></p>
-            <h3>3. 比例伤害必杀技</h3>
+            <h4>3. 比例伤害必杀技</h4>
             <p class="zero">Abyss</p>
             <p style = "text-align: left"><code>D = 3/4 x 受击者CurrentHP</code></p>
             <p class="zero">LifeSuck</p>
             <p style = "text-align: left"><code>D = 受击者VIT / 4</code></p>
             <p class="zero">CalmSong</p>
             <p style = "text-align: left"><code>D = 受击者Current MP x 9/10</code></p>
-            <h3>4. 比例治疗必杀技</h3>
+            <h4>4. 比例治疗必杀技</h4>
             <p class="zero">CuteKiss (Faerie)</p>
             <p style = "text-align: left"><code>-D = 施法者HP / 10</code></p>
             <p class="zero">DeepKiss (Faerie)</p>
