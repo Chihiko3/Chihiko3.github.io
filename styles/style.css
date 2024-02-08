@@ -1,3 +1,29 @@
+html {
+    font-size: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    background-color:azure;
+}
+
+body{
+    width: 600px;
+    margin: 1em auto;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
 p {
-    color: red;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+li {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 1px;
 }
