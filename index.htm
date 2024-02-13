@@ -1,101 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <title>Chihiko's</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- TODO: 搜下到底应该用什么lang代码代表中文简体 -->
+    <html lang="cmn-hans">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="1140.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="layout.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="mobile.css" media="handheld, only screen and (max-width: 767px)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/I-need-you-cat-1.jpeg">
+    <title>Chihiko's</title>
 </head>
 
+<!-- 创建了一个body主体，id为arcbody，考虑到其他页面的body可能不会使用这个背景颜色，所以创建了一个id -->
 <body id="arcbody">
-<div class="container">
-    <div id="indexwrap">
-        <div class="row header">
-            <div class="twocol pad"><br/></div>
-            <div class="fivecol header" >
-                <h0>Chihiko's</h0>
-                <p>Rather than love, than money, than fame, give me truth.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="twocol pad"><br/></div>
-            <div class="fourcol">
-                <h2 class="close">Article</h2>
-                <ul>
-                    <li class="close"><a href="archive/FF14Hist.htm">FFXIV Settings</a><br/>
-                        最终幻想14世界观整理
-                    <li class="close"><a href="archive/TheImageOfTheCity.htm">The Image Of The City<sup>En</sup></a><br/>
-                        笔记
-                    <li class="close"><a href="archive/TriangleStrategy.htm">Triangle Strategy</a><br/>
-                        三角战略浅析
-                    
-                    <li class="close"><a href="archive/Tactics_Orge_ps.htm">Tactics Orge Battle on PS</a><br/>
-                        皇家骑士团2战斗浅析
-                    
-                    <li class="close"><a href="archive/Flow.htm">DDA in Flow<sup>Translated</sup></a><br/>
-                        基于心流理论阐述玩家导向的DDA
-                    </li>
-                    <li class="close"><a href="archive/MDA.htm">MDA<sup>En</sup></a><br/>
-                        MDA in a casual tone
-                    </li>
-                    
-                    <li class="close"><a href="archive/Arknights.htm">Arknights Overall</a><br/>
-                        明日方舟浅析
-                    </li>
-                </ul>
-            </div>
-            <div class="fourcol">
-                <h2 class="close">Indie</h2>
-                <!-- <span>'独立'游戏。</span> -->
-                <ul>
-                    <li><a href="archive/DeathRoll.htm">Death Roll</a><br/>
-                        丢骰子小游戏
-                    </li>
-                </ul>
-                
-                <h2 class="close">Project</h2>
-                <ul>
-                    <li><a href="archive/SDBLT.htm">神都不良探</a><br/>
-                        互动式电影游戏
-                    </li>
-                </ul>
-            </div>
-            <!-- <div class="sixcol pad"><br/></div> -->
-            <div class="fourcol">
-                <h2 class="close">Artwork</h2>
-                <ul>
-                    <li><a href="artwork/Character.htm">Characters</a><br/>
-                        一些角色
-                    </li>
-                    <li><a href="archive/shaderTest.htm">Shaders</a><br/>
-                        GLSL
-                    </li>
-                </ul>
-            </div>
+    <!-- 创建了一个div的容器，其包含整个网页，并设置了网页最底层的内边距 -->
+    <div class="container">
+        <!-- 继续创建了一个div容器，并设置了上下外边距 -->
+        <div id="indexwrap">
+            <!-- row 设置了这一区块的占用范围为一整行-->
+            <div class="row">
+                <!-- xxxcol都是1140.css提供的布局属性，界面分成了12个col，每个col的%去1140.css查询、修改-->
+                <!-- 这里配置了一个空的1col，所以会让下一个col的整体位置向右移动，起到一个排版的作用-->
+                <!-- pad是在特定的分辨率下，取消使用此处的col，比如手机屏幕就不再需要左边有空的col来帮助排版，这时候当检测到是手机的分辨率就会调用pad，隐藏col-->
+                <!-- <br />很重要，因为2col只标记了位置，并没有实际内容，如果不存在实际内容占据空间，排版的功能就失去了，所以需要填充一个东西，比如 <p></p> 或者 <br /> -->
+                <div class="onecol pad"> <br /></div>
 
-            <div class="fourcol">
-                <h2 class="close">Misc</h2>
-                <ul>
-                    <li><a href="archive/Yuzu_Install.htm">Yuzu</a><br/>
-                        安装教程
-                    </li>
-                </ul>
+                <!-- 因为之前1col的存在7col就意味着这个div占据了1col到7col的空间（文本空间 = 6col），而不是从第7col开始填充文本 -->
+                <!-- 所以如果想要让其内容向右平移，不是将7col改为8col（这只能增加当前区块的宽度，以及影响下一个区块的起始位置），而是将上文的1col改为2col -->
+                <!-- header让其下方的外边距为0 -->
+                <div class="sevencol header">
+                    <h1>Chihiko's</h1>
+                    <p>Rather than love, than money, than fame, give me truth.</p>
+                </div>
+                <hr>
             </div>
-            
-        </div>
-        <!-- No need now
-        
-        <div class="row">
-            <div class="twocol pad"><br/></div>
-            <div class="sixcol">
-                <span id="footnav"> <a href=#>↑ back to top</a> | <a href="archive/me.htm">me</a>  </span>
+            <!-- 第一个row的div结束了，我们可以开启第二个row，也就是“第二行”即第二个区块-->
+            <div class="row">
+                <!-- 用于排版的col都需要同时具有pad属性以及空白内容填充 -->
+                <div class="onecol pad"><br /></div>
+                <div class="fourcol">
+                    <h2 class="close">Article</h2>
+                    <ul>
+                        <li class="close"><a href="archive/FF14Hist.htm">FFXIV Setting</a></li>
+                        <li class="close"><a href="archive/TheImageOfTheCity.htm">The Image Of The City</a></li>
+                        <li class="close"><a href="archive/TriangleStrategy.htm">Triangle Strategy</a></li>
+                        <li class="close"><a href="archive/Tactics_Orge_ps.htm">Tactics Orge Battle</a></li>
+                        <li class="close"><a href="archive/Flow.htm">DDA in Flow</a></li>
+                        <li class="close"><a href="archive/MDA.htm">MDA</a></li>
+                        <li class="close"><a href="archive/Arknights.htm">Arknights</a><br /></li>
+                    </ul>
+                    <!-- 专门给pc用来排版的，手机端会自动忽略 -->
+                    <!-- TODO：后续尝试修改css来实现 -->
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                </div>
+                <div class="threecol">
+                    <h2 class="close">Project</h2>
+                    <ul>
+                        <li><a href="archive/DeathRoll.htm">Death Roll</a><br /></li>
+                        <li><a href="archive/SDBLT.htm">神都不良探</a><br /></li>
+                    </ul>
+                </div>
+                <div class="threecol">
+                    <h2 class="close">Misc</h2>
+                    <ul>
+                        <li class="close"><a href="artwork/Character.htm">Characters</a><br /></li>
+                        <li><a href="archive/shaderTest.htm">Shaders</a><br /></li>
+                        <li><a href="archive/Yuzu_Install.htm">Yuzu</a><br /></li>
+                    </ul>
+                    <!-- 排版用空行 -->
+                    <div class="tencol"><br /></div>
+                </div>
             </div>
         </div>
-        
-        -->
     </div>
-</div>
 </body>
+
 </html>

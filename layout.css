@@ -1,20 +1,32 @@
 /* Layout for desktop version */
 /* Get from http://pre-sence.com/*/
+html {
+  font-family: 'Noto Sans', sans-serif;
+}
 
 body {
-    font-family: Verdana, Geneva, sans-serif;
-    background-color: #fff;
-    color: #222;
+  background-color: #676767;
+  /* 目前html都是用的arcbody这个id，所以这一条没啥用 */
 }
+
+#arcbody {
+  background-color: black;
+  /* 控制背景颜色 */
+}
+
+#arcbody p {
+  line-height: 1.8em;
+}
+
 
 #content {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.bottom-nav{
-  position:fixed;
-  bottom:0;
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
 }
 
 #footnav {
@@ -30,40 +42,40 @@ body {
 hr {
   margin: 0;
   border: none;
-  width: 400px;
+  width: 100%;
   height: 1px;
   opacity: 0.5;
-  background: linear-gradient(
-          to right,
-          red 20%,
-          yellow 20%,
-          yellow 36%,
-          green 36%,
-          green 60%,
-          blue 60%,
-          blue 100%
-  );
+  background: linear-gradient(to right,
+    red 30%,
+    orange 40%,
+    rgb(244, 208, 63) 50%,
+    green 60%,
+    blue 90%);
 }
 
-h0{
-  font-weight: bolder;
-  margin-bottom: 0; /*h1 is always followed by a <p>*/
-}
 h1 {
   font-weight: bolder;
-  margin-bottom: 0; /*h1 is always followed by a <p>*/
+  margin-bottom: 0;
+  /*h1 is always followed by a <p>*/
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: bolder;
   position: relative;
   left: -9px;
   padding-left: 8px;
-  border-left: 2px black solid;
-  
+  border-left: 8px black solid;
+  margin-bottom: 4px;
 }
 
 h3 {
+  font-weight: bold;
+  margin-bottom: 0;
+  /*h3 is always followed by a <p>*/
+
+}
+
+h4 {
   font-weight: bold;
   font-size: 16px;
 }
@@ -71,9 +83,11 @@ h3 {
 .close {
   margin-bottom: 4px;
 }
+
 .space {
   margin-bottom: 16px;
 }
+
 .zero {
   margin-bottom: 0;
 }
@@ -84,7 +98,8 @@ sup {
   margin-left: 2px;
 }
 
-h2 a, h3 a {
+h2 a,
+h3 a {
   border: none;
   padding-right: 16px;
 }
@@ -103,10 +118,6 @@ li p {
   margin-bottom: 12px;
 }
 
-b {
-  font-family: "SimHei", "STHeiti", monospace;
-}
-
 img {
   margin-bottom: 4px;
 }
@@ -118,9 +129,10 @@ table {
   margin-bottom: 22px;
 }
 
-td, th {
+td,
+th {
   border: 1px solid black;
-  padding: 2px 20px 2px 4px;  
+  padding: 2px 20px 2px 4px;
 }
 
 
@@ -142,14 +154,6 @@ td, th {
   line-height: 20px;
 }
 
-#arcbody {
-  background-color: #ffffff; /*readability color*/
-}
-
-#arcbody p {
-  line-height: 1.8em;
-}
-
 pre {
   line-height: 18px;
   margin-left: 1em;
@@ -160,9 +164,10 @@ pre {
   width: 90%;
   background-color: #DDDDDD;
   overflow-x: auto;
-} 
+}
 
-code, pre span {
+code,
+pre span {
   font-family: "Consolas", monospace;
   font-size: 14px;
   color: #4B4B4B;
@@ -170,7 +175,8 @@ code, pre span {
 }
 
 /* dirty fixes */
-p code, li code {
+p code,
+li code {
   padding-left: 0.3em;
   padding-right: 0.3em;
 }
@@ -190,11 +196,14 @@ pre code {
 
 /* Layout for mobile version */
 
-@media handheld, only screen and (max-width: 767px) {
+@media handheld,
+only screen and (max-width: 767px) {
 
-#leftcol, #rightcol, .pad {
-  display: none;
-}
+  #leftcol,
+  #rightcol,
+  .pad {
+    display: none;
+  }
 
 
 }
@@ -202,9 +211,9 @@ pre code {
 
 /* Provide higher res assets for iPhone 4 */
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 
-/* An example of how to override an image with one twice the size for iPhone 4. Specify the original pixel size with background-size.
+  /* An example of how to override an image with one twice the size for iPhone 4. Specify the original pixel size with background-size.
 .download {
 background: url(../img/downarrow@2x.png) no-repeat;
 background-size: 27px 28px;
