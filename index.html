@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <html lang="cmn-hans">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/1140.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../style/layout.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../style/mobile.css" media="handheld, only screen and (max-width: 767px)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/I-need-you-cat-1.jpeg">
+    <title>Chihiko's</title>
+</head>
+
+<!-- 创建了一个body主体，id为arcbody，考虑到其他页面的body可能不会使用这个背景颜色，所以创建了一个id -->
+
+<body id="arcbody">
+    <!-- 创建了一个div的容器，其包含整个网页，并设置了网页最底层的内边距 -->
+    <div class="container">
+        <!-- 继续创建了一个div容器，并设置了上下外边距 -->
+        <div id="indexwrap">
+            <!-- row 设置了这一区块的占用范围为一整行-->
+            <div class="row">
+                <!-- xxxcol都是1140.css提供的布局属性，界面分成了12个col，每个col的%去1140.css查询、修改-->
+                <!-- 这里配置了一个空的1col，所以会让下一个col的整体位置向右移动，起到一个排版的作用-->
+                <!-- pad是在特定的分辨率下，取消使用此处的col，比如手机屏幕就不再需要左边有空的col来帮助排版，这时候当检测到是手机的分辨率就会调用pad，隐藏col-->
+                <!-- <br />很重要，因为2col只标记了位置，并没有实际内容，如果不存在实际内容占据空间，排版的功能就失去了，所以需要填充一个东西，比如 <p></p> 或者 <br /> -->
+                <div class="onecol pad"> <br /></div>
+
+                <!-- 因为之前1col的存在7col就意味着这个div占据了1col到7col的空间（文本空间 = 6col），而不是从第7col开始填充文本 -->
+                <!-- 所以如果想要让其内容向右平移，不是将7col改为8col（这只能增加当前区块的宽度，以及影响下一个区块的起始位置），而是将上文的1col改为2col -->
+                <!-- header让其下方的外边距为0 -->
+                <div class="sevencol header">
+                    <h1>Chihiko's</h1>
+                    <p>Rather than love, than money, than fame, give me truth.</p>
+                </div>
+                <hr>
+            </div>
+            <!-- 第一个row的div结束了，我们可以开启第二个row，也就是“第二行”即第二个区块-->
+            <div class="row">
+                <!-- 用于排版的col都需要同时具有pad属性以及空白内容填充 -->
+                <div class="onecol pad"><br /></div>
+                <div class="fourcol">
+                    <h2>Article</h2>
+                    <ul>
+                        <li class="homepage"><a href="archive/ff14-setting.html">「最终幻想14」世界观</a></li>
+                        <li class="homepage"><a href="archive/the-image-of-the-city.html">「城市的意象」笔记</a></li>
+                        <li class="homepage"><a href="archive/triangle-strategy.html">「三角战略」整体浅析</a></li>
+                        <li class="homepage"><a href="archive/tactics-orge-ps.html">「皇家骑士团」战斗浅析</a></li>
+                        <li class="homepage"><a href="archive/flow.html">基于心流的动态难度调整</a></li>
+                        <li class="homepage"><a href="archive/mda.html">MDA开发流程概述</a></li>
+                        <li class="homepage"><a href="archive/arknights.html">「明日方舟」整体浅析</a><br /></li>
+                    </ul>
+                    <!-- 专门给pc用来排版的，手机端会自动忽略 -->
+                    <!-- TODO：后续尝试修改css来实现 -->
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                    <div class="tencol pad"><br /></div>
+                </div>
+                <div class="threecol">
+                    <h2>Project</h2>
+                    <ul>
+                        <li class="homepage"><a href="archive/death-roll.html">「Death Roll」</a><br /></li>
+                        <li class="homepage"><a href="archive/s-d-b-l-t.html">「神都不良探」</a><br /></li>
+                    </ul>
+                </div>
+                <div class="threecol">
+                    <h2>Misc.</h2>
+                    <ul>
+                        <li class="homepage"><a href="artwork/Artwork.html">随便画画</a><br /></li>
+                        <li class="homepage"><a href="archive/yuzu-installation.html">Yuzu模拟器安装</a><br /></li>
+                    </ul>
+                    <!-- 排版用空行 -->
+                    <div class="tencol"><br /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

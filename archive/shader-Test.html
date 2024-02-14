@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="cmn-hans">
+<!-- 这篇文章属于历史遗留文章，里面html会有很多不规范的地方，也不是直接由obsidian通过Pandoc导出的，懒得改了 -->
+
+
+<head>
+    <meta charset="utf-8" />
+    <title> Shaders | Chihiko's </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/1140.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../style/layout.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../style/mobile.css" media="handheld, only screen and (max-width: 767px)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/I-need-you-cat-1.jpeg">
+</head>
+
+<body id="arcbody">
+    <div class="container">
+        <div class="row">
+            <div class="twocol" id="leftcol"><br /></div>
+            <div class="sevencol last">
+                <h1>Shaders</h1>
+                <p>GLSL shaders only (at least now)</p>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="twocol" id="leftcol"><br /></div>
+            <div class="sevencol last" id="content">
+                <!--<p><em>last update 01/16/2023</em></p>-->
+                <h2 class="h2-at-top">Default Uniforms</h2>
+                <ul>
+                    <li>u_time</li>
+                    <li>u_resolution</li>
+                    <li>u_mouse</li>
+                    <li>u_tex[n]</li>
+                </ul>
+                <h2>1st shader ever</h2>
+                <canvas class="glslCanvas" data-fragment-url="shaders/1st shader ever-1673798102278.frag" width="300"
+                    height="300"></canvas>
+                <h2>fake live2D face with emotions</h2>
+                <canvas class="glslCanvas" data-fragment-url="shaders/simple drawing-1673800785087.frag" width="300"
+                    height="300"></canvas>
+                <h2>drawn by subtracting f(x)s</h2>
+                <canvas class="glslCanvas" data-fragment-url="shaders/draw by subtracting f(x)s-1674066050310.frag"
+                    width="300" height="300"></canvas>
+                <span id="footnav"> <a href="../index.html">← Homepage</a></span>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
