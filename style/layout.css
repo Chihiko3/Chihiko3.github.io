@@ -1,5 +1,5 @@
 /* Layout for desktop version */
-/* Get from http://pre-sence.com/*/
+/* Get the template from http://pre-sence.com/*/
 html {
   font-family: 'Noto Sans', sans-serif;
 }
@@ -116,7 +116,7 @@ h3 a {
 }
 
 ul {
-  list-style-type: circle;
+  list-style-type: square;
   padding-left: 2em;
   text-indent: 0.1em;
 }
@@ -200,7 +200,7 @@ pre {
 code,
 pre span {
   font-family: "Consolas", monospace;
-  font-size: 14px;
+  font-size: 12px;
   color: #4B4B4B;
   background-color: #DDDDDD;
 }
