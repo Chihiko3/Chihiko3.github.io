@@ -201,9 +201,17 @@ body {
 
 a {
     text-decoration: none;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     border-bottom: 1px dashed black;
     color: black;
+}
+
+table+a {
+    text-decoration: none;
+    padding-bottom: 0px;
+    border-bottom: 1px dashed black;
+    color: black;
+    font-size: 12px;
 }
 
 a:hover {
@@ -216,21 +224,43 @@ a img {
 }
 
 img {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    border: 5px solid black;
+    display: block;
+    margin: 0 auto;
+}
+
+ul img {
+    display: block;
+    margin: 0;
+}
+
+img:hover {
+    outline: black solid;
+    box-shadow: 4px 5px 5px 1px gray;
 }
 
 p,
-ul,
-ol,
 blockquote {
     margin-bottom: 10px;
     /* Changing this will break the baseline grid. */
-    font-size: 13px;
+    font-size: 12.5px;
 }
+
+a+p {
+    margin-top: 5px;
+}
+
+ul,
+ol {
+    margin-bottom: 5px;
+    /* Changing this will break the baseline grid. */
+    font-size: 12.5px;
+}
+
+p+ul,
+p+ol {
+    margin-top: -15px;
+}
+
 
 li {
     margin-bottom: -2px;
@@ -244,7 +274,7 @@ blockquote {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 33px;
     line-height: 36px;
     /* Changing this will break the baseline grid. */
     margin-top: 20px;
@@ -262,15 +292,20 @@ h2 {
     /* Changing this will break the baseline grid. */
 }
 
+/* h2直接作为文本内容第一行的时候，有些时候使用p作为文本内容第一行的，就不需要应用此css */
+.h2-at-top {
+    margin-top: 0px;
+}
+
 h3 {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
     margin-bottom: 5px;
     /* Changing this will break the baseline grid. */
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 4px;
     /* Changing this will break the baseline grid. */
 }
